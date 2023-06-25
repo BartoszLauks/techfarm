@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+  techfarm-mysql:
+    image: mysql:5.7
+    container_name: techfarm-mysql
+    environment:
+      #MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_ROOT_PASSWORD: my_secret_password
+      MYSQL_DATABASE: app_db
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
+      #MYSQL_USER: db_user
+      #MYSQL_PASSWORD: db_user_pass
+    ports:
+      - "33063:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: techfarm_phpmyadmin
+    links:
+      - techfarm-mysql
+    environment:
+      PMA_HOST: techfarm-mysql
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    ports:
+      - '8081:80'
+    depends_on:
+      - techfarm-mysql
+
+volumes:
+  dbdata:

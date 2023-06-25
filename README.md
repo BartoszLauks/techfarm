@@ -36,5 +36,5 @@ techfarm.postman_collection.json
 ### Backup bazy danych z danymi w pliku
 
 ```bash
-
+app_db_techfarm.sql
 ```

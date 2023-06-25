@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "1bce54c5-4120-45b6-be1e-3011782bb1f5",
+		"name": "techfarm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14933163"
+	},
+	"item": [
+		{
+			"name": "Statistic",
+			"item": [
+				{
+					"name": "Statistic",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"sensor\" : 7,\n        \"temperature\" : \"1\",\n        \"humidity\" : \"1\"\n    },\n    {\n        \"sensor\" : 7,\n        \"temperature\" : \"2\",\n        \"humidity\" : \"2\"\n    }\n]\n\n"
+						},
+						"url": {
+							"raw": "{{url}}/statistic",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"statistic"
+							],
+							"query": [
+								{
+									"key": "test",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sensor statisstic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/statistic/sensor/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"statistic",
+								"sensor",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/statistic",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"statistic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Green House statisstic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/statistic/greenHouse/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"statistic",
+								"greenHouse",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Sensor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"series\" : \"2\",\n        \"model\" : \"m1\",\n        \"greenHouse\" : 4\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/sensor",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"sensor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GreenHouse Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"city\" : \"test_city\",\n        \"street\" : \"test_street\",\n        \"postCode\" : \"test_postCode\",\n        \"houseNumber\" : \"test_houseNumber\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/admin/greenHouse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"admin",
+								"greenHouse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sensor",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sensor",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sensor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sensor/7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sensor",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GreenHouse",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/greenHouse",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"greenHouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/greenHouse/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"greenHouse",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test greenHouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/t",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"t"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test Sensor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/s",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"s"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test Statistic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/st",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"st"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080/"
+		}
+	]
+}

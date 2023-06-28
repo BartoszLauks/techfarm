@@ -34,6 +34,7 @@ techfarm.postman_collection.json
 ```
 
 ### Backup bazy danych z danymi w pliku
+#### Bazę danych moża dodać bezposiredio do konternera lub użyć PHPMyAdmin
 
 ```bash
 app_db_techfarm.sql
